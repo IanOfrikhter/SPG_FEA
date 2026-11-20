@@ -1,0 +1,25 @@
+# Зависимости
+node_modules/
+
+# Сборка
+dist/
+build/
+.vite/
+
+# Логи
+*.log
+npm-debug.log*
+
+# Секреты — никогда не коммитить (см. AGENTS.md)
+.env
+.env.*
+
+# Результаты расчётов / большие бинарники
+*.out
+*.res
+
+# ОС и редакторы
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
