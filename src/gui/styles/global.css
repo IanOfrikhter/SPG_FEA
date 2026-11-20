@@ -1,0 +1,185 @@
+/* SPGFEA — глобальные стили каркаса интерфейса (стиль «настольной» САПР-программы) */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  color: #1f2328;
+  background: #f5f6f8;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.workspace {
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 4px;
+  background: #e9ebef;
+}
+
+.workspace .dv-host {
+  height: 100%;
+}
+
+/* Лента инструментов */
+
+.ribbon {
+  background: #ffffff;
+  border-bottom: 1px solid #d0d4da;
+  user-select: none;
+}
+
+.ribbon-tabs {
+  display: flex;
+  gap: 2px;
+  padding: 2px 8px 0;
+  background: #eef0f3;
+  border-bottom: 1px solid #d0d4da;
+}
+
+.ribbon-tab {
+  border: 1px solid transparent;
+  border-bottom: none;
+  background: transparent;
+  padding: 5px 14px;
+  font: inherit;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+}
+
+.ribbon-tab:hover {
+  background: #e3e7ee;
+}
+
+.ribbon-tab.active {
+  background: #ffffff;
+  border-color: #d0d4da;
+  font-weight: 600;
+}
+
+.ribbon-content {
+  display: flex;
+  align-items: stretch;
+  padding: 8px 12px 6px;
+  min-height: 64px;
+}
+
+.ribbon-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 14px;
+  border-right: 1px solid #e3e6ea;
+}
+
+.ribbon-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.ribbon-button {
+  padding: 6px 12px;
+  font: inherit;
+  border: 1px solid #c9cdd4;
+  border-radius: 4px;
+  background: #fafbfc;
+  cursor: pointer;
+}
+
+.ribbon-button:hover:not(:disabled) {
+  background: #e8f0fe;
+  border-color: #7aa7e7;
+}
+
+.ribbon-button:disabled {
+  color: #9aa0a6;
+  cursor: default;
+}
+
+.ribbon-group-title {
+  margin-top: 6px;
+  text-align: center;
+  color: #6e747d;
+  font-size: 11px;
+}
+
+/* Дерево задачи */
+
+.task-tree {
+  height: 100%;
+  overflow: auto;
+  background: #ffffff;
+  padding: 6px;
+}
+
+.task-tree ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 14px;
+}
+
+.task-tree > ul {
+  padding-left: 4px;
+}
+
+.tree-root {
+  font-weight: 600;
+  padding: 3px 4px;
+}
+
+.tree-item {
+  padding: 3px 4px;
+  border-radius: 3px;
+  cursor: default;
+}
+
+.tree-item:hover {
+  background: #eef3fc;
+}
+
+/* Вьюпорт */
+
+.viewport {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.viewport canvas {
+  display: block;
+}
+
+/* Свойства */
+
+.properties {
+  height: 100%;
+  padding: 10px;
+  background: #ffffff;
+  color: #6e747d;
+}
+
+/* Строка состояния */
+
+.statusbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 12px;
+  background: #eef0f3;
+  border-top: 1px solid #d0d4da;
+  color: #4a4f57;
+}
